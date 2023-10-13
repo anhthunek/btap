@@ -21,7 +21,7 @@ a {
     background-color: #eee;
     padding: 10px 0;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 .header-top button {
     border: none;
@@ -126,9 +126,9 @@ a {
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.14);
     box-sizing: border-box;
 }
-.post-item:last-of-type {
+/* .post-item:last-of-type {
     margin-bottom: 0;
-}
+} */
 .post-content {
     padding-left: 30px;
     width: 100%;
@@ -237,6 +237,12 @@ figure {
     align-items: center;
     justify-content: center;
 }
+.widget-item .form label {
+    width: 70%;
+}
+.widget-item .form label input {
+    width: 100%;
+}
 .widget-item .form input {
     font-family: inherit;
     padding: 10px;
@@ -333,20 +339,21 @@ figure {
     color: gray;
 }
 /* Social fixed */
-.social-fixed {
+.social-fixed.vertical {
     position: fixed;
     top: 20%;
     left: 0;
     z-index: 100;
 }
-.social-fixed a {
-}
 .social-fixed a img {
     width: 70%;
 }
-.social-fixed .hide {
+.social-fixed.vertical .hide {
     width: 20px;
     cursor: pointer;
+}
+.social-fixed.horizontal {
+    display: none;
 }
 /* Back-to-top */
 .back-to-top button {
@@ -376,21 +383,58 @@ figure {
     .nav-container {
         display: none;
     }
-    .header-top button.fa-search {
+    .header-top {
+        justify-content: right;
+    }
+    .main-container {
+        display: block;
+    }
+    .widget-container {
+        width: 95%;
+        margin: auto;
+    }
+    .posts-container {
+        width: 95%;
+        margin: auto;
+    }
+    .social-fixed.vertical {
+        top: 20%;
+    }
+}
+@media screen and (max-width: 540px) {
+    .widget-container {
+        width: 100%;
+    }
+    .posts-container {
+        width: 100%;
+        margin: auto;
+    }
+    .post-item {
+        display: block;
+        padding: 20px;
+    }
+    .post-content {
+        padding-left: 0;
+    }
+    .social-fixed.vertical {
         display: none;
+    }
+    .social-fixed.horizontal {
+        position: fixed;
+        bottom: -9px;
+        width: 100%;
+        display: block;
+    }
+    .social-fixed.horizontal img {
+        width: 100%;
     }
     .header-top {
         justify-content: center;
     }
-
     .header-top button.fa-angle-down {
         display: block;
     }
-    .widget-container {
+    .header-top button.fa-search {
         display: none;
-    }
-    .posts-container {
-        min-width: 85%;
-        margin: auto;
     }
 }
