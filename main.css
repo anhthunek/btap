@@ -102,9 +102,9 @@ a {
 .nav-item:hover a {
     color: #00AA4F;
 }
-/* Main */
+/* content */
 
-.main-container {
+.content-container {
     display: flex;
     justify-content: space-between;
     padding: 30px 0 50px 0;
@@ -386,7 +386,7 @@ figure {
     .header-top {
         justify-content: right;
     }
-    .main-container {
+    .content-container {
         display: block;
     }
     .widget-container {
