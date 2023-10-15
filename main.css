@@ -375,6 +375,7 @@ figure {
         top: 0;
         z-index: 100;
     }
+    
     .mobile-nav {
         display: block;    
     }
@@ -383,7 +384,6 @@ figure {
     }
     .title-area {
         width: 70%;
-        text-align: left;
     }
     .desc {
         font-size: 14px;
@@ -408,6 +408,10 @@ figure {
     .social-fixed.vertical {
         top: 20%;
     }
+    .widget-ad a img {
+        width: 60%;
+    }
+    
 }
 @media screen and (max-width: 540px) {
     .header-middle {
@@ -434,6 +438,7 @@ figure {
         position: fixed;
         bottom: -9px;
         width: 100%;
+        z-index: 1000;
         display: block;
     }
     .social-fixed.horizontal img {
@@ -447,5 +452,8 @@ figure {
     }
     .header-top button.fa-search {
         display: none;
+    }
+    #footer {
+        margin-bottom: 34px;
     }
 }
