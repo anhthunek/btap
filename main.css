@@ -384,6 +384,7 @@ figure {
     }
     .title-area {
         width: 70%;
+        text-align: left;
     }
     .desc {
         font-size: 14px;
@@ -452,6 +453,9 @@ figure {
     }
     .header-top button.fa-search {
         display: none;
+    }
+    .widget-ad a img {
+        width: 100%;
     }
     #footer {
         margin-bottom: 34px;
