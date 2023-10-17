@@ -48,6 +48,7 @@
               <li class="nav-item"><a href="">Breakfast</a></li>
               <li class="nav-item"><a href="">Lunch</a></li>
               <li class="nav-item"><a href="">Dinner</a></li>
+              <li class="nav-item item-btn"><button class="fa-solid fa-xmark"></button></li>
             </ul>
           </nav>
         </div>
@@ -562,5 +563,15 @@
         </div>
       </footer>
     </div>
+  <script>
+    const btn = document.querySelector(".mobile-nav")
+    const btn_close = document.querySelector(".nav-item.item-btn")
+    btn.addEventListener ('click', function () {
+      document.querySelector('.header-bottom').classList.add('show')
+    })
+    btn_close.addEventListener('click', function () {
+      document.querySelector('.header-bottom').classList.remove('show')
+    })
+  </script>
   </body>
 </html>

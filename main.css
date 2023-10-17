@@ -83,7 +83,11 @@ a {
     display: none;
     margin: 20px;
 }
+.mobile-nav:hover {
+    background-color: #141413;
+}
 .header-bottom {
+    width: 100%;
     border: 1px solid #80808021;
     border-bottom: 3px solid #00AA4F ;
 }
@@ -100,6 +104,9 @@ a {
 }
 .nav-item{
     padding: 0 12px;
+}
+.nav-item button {
+    display: none;
 }
 .nav-item:hover a {
     color: #00AA4F;
@@ -344,7 +351,7 @@ figure {
     position: fixed;
     top: 20%;
     left: 0;
-    z-index: 100;
+    z-index: 20;
 }
 .social-fixed a img {
     width: 70%;
@@ -373,11 +380,12 @@ figure {
     #header {
         position: fixed;
         top: 0;
-        z-index: 100;
+        z-index: 2;
     }
     
     .mobile-nav {
-        display: block;    
+        display: block;   
+        cursor: pointer; 
     }
     #content {
         margin-top: 200px;
@@ -389,8 +397,55 @@ figure {
     .desc {
         font-size: 14px;
     }
+    .header-bottom {
+        /* display: none; */
+        position: fixed;
+        top: 10px;
+        left: 0;
+        z-index: 100;
+        border: none;
+        width: 80%;
+        transform: translateX(-100%);
+        transition: 0.3s ease;
+    }
+    .header-bottom.show {
+        transform: translateX(0);
+    }
     .nav-container {
-        display: none;
+        width: 100%;
+        background-color: #fff;
+    }
+    .nav-area {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav-item {
+        line-height: 45px;
+        border-bottom: 1px solid #80808042;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .nav-item.item-btn {
+        background-color: #00AA4F;
+        margin: auto;
+        transition: 0.3s;
+    }
+    .nav-item.item-btn button {
+        display: block;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        padding: 10px 0;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        
+    }
+    .nav-item.item-btn:hover {
+        background-color: #141413;
     }
     .header-top {
         justify-content: right;
@@ -399,6 +454,7 @@ figure {
         display: block;
     }
     .widget-container {
+        /* position: relative; */
         width: 95%;
         margin: auto;
     }
