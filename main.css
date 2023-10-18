@@ -370,7 +370,7 @@ figure {
     position: fixed;
     top: 20%;
     left: 0;
-    z-index: 0;
+    z-index: 1;
 }
 .social-fixed a img {
     width: 70%;
@@ -385,9 +385,6 @@ figure {
 /* Back-to-top */
 .back-to-top {
     display: none;
-}
-.showBackTop {
-    display: block;
 }
 .back-to-top button {
     position: fixed;
@@ -429,7 +426,7 @@ figure {
         position: fixed;
         top: 10px;
         left: 0;
-        z-index: 100;
+        z-index: 10;
         border: none;
         width: 100%;
         transform: translateX(-100%);
@@ -495,7 +492,7 @@ figure {
         margin: auto;
     }
     .social-fixed.vertical {
-        top: 20%;
+        top: 30%;
     }
     .widget-ad a img {
         width: 60%;

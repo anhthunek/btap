@@ -581,7 +581,10 @@
       document.querySelector(".header-top .fa-search").classList.toggle("showSearch")
     })
     window.addEventListener('scroll', function () {
-      this.pageYOffset > 250 ? btn_back_to_top.classList.add("showBackTop") : btn_back_to_top.classList.remove("showBackTop")
+      this.pageYOffset > 250 ? btn_back_to_top.style.display = "block" : btn_back_to_top.style.display = "none"
+    })
+    btn_back_to_top.addEventListener('click', function () {
+      document.documentElement.scrollTop = 0; 
     })
   </script>
   </body>
