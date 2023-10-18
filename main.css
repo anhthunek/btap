@@ -12,6 +12,7 @@ a {
     transition: 0.3s ease;
 }
 /* Header */
+
 #header {
     width: 100%;
 }
@@ -34,7 +35,7 @@ a {
     display: none;
     color: #00AA4F;
     font-size: 28px;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 .header-top button.fa-angle-down:hover {
     color: black;
@@ -49,6 +50,24 @@ a {
     text-align: center;
     border-radius: 50%;
     margin-right: 60px;
+    transition: 0.4s ease;
+}
+/* Animate */
+.showSearch {
+    animation: showSearch 1s forwards ;
+    display: block !important;
+}
+@keyframes showSearch {
+    from {
+        transform: translateX(-200px);   
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 .header-middle {
     display: flex;
@@ -351,7 +370,7 @@ figure {
     position: fixed;
     top: 20%;
     left: 0;
-    z-index: 20;
+    z-index: 0;
 }
 .social-fixed a img {
     width: 70%;
@@ -364,6 +383,12 @@ figure {
     display: none;
 }
 /* Back-to-top */
+.back-to-top {
+    display: none;
+}
+.showBackTop {
+    display: block;
+}
 .back-to-top button {
     position: fixed;
     bottom: 10%;
@@ -397,22 +422,29 @@ figure {
     .desc {
         font-size: 14px;
     }
+    .header-middle {
+        border-bottom: 2px solid #00AA4F;
+    }
     .header-bottom {
-        /* display: none; */
         position: fixed;
         top: 10px;
         left: 0;
         z-index: 100;
         border: none;
-        width: 80%;
+        width: 100%;
         transform: translateX(-100%);
         transition: 0.3s ease;
     }
     .header-bottom.show {
         transform: translateX(0);
     }
-    .nav-container {
+    .overlay {
         width: 100%;
+        height: 100%;
+        background-color: #1414134a;
+    }
+    .nav-container {
+        width: 80%;
         background-color: #fff;
     }
     .nav-area {
@@ -468,7 +500,9 @@ figure {
     .widget-ad a img {
         width: 60%;
     }
-    
+    .rotate {
+        transform: rotate(180deg);
+    }
 }
 @media screen and (max-width: 540px) {
     .header-middle {
@@ -502,10 +536,13 @@ figure {
         width: 100%;
     }
     .header-top {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .header-top button.fa-angle-down {
-        display: block;
+        display: inline-block;
     }
     .header-top button.fa-search {
         display: none;
